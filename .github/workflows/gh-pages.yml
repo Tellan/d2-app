@@ -1,0 +1,20 @@
+name: Test and deploy to gh-pages
+# This workflow is triggered on pushes to the repository.
+on:
+  push:
+    branches:
+      - main
+      - actions
+
+jobs:
+  deploy:
+    name: Deploy
+    # This job runs on Linux
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Install dependencies
+        run: yarn
+      - name: Test
+        run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+      - name: Deply
+        run: npm run deploy
