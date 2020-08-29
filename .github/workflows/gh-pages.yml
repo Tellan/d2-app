@@ -32,4 +32,4 @@ jobs:
       - name: Test
         run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
       - name: Deploy
-        run: npm run deploy
+        run: npm run ng -- deploy
