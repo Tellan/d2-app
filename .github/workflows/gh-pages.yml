@@ -17,5 +17,5 @@ jobs:
         run: yarn
       - name: Test
         run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
-      - name: Deply
+      - name: Deploy
         run: npm run deploy
